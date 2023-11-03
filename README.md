@@ -1,4 +1,7 @@
 # SongSelectCrownIcons
+| Mono | IL2CPP |
+|:--:|:--:|
+|✅|✅|
  
 This is a mod for Taiko no Tatsujin: The Drum Master!\
 It shows your highest difficulty crowns at the bottom left of each song on the song select, and shows ura too.\
