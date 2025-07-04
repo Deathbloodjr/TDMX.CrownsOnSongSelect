@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<AuthorName>DB</AuthorName>
 		<ModName>CrownsOnSongSelect</ModName>
-		<ModVersion>1.1.0</ModVersion>
+		<ModVersion>1.1.1</ModVersion>
 		<Description>A mod for TDMX to show high score crowns on the song select screen.</Description>
 	</PropertyGroup>
 
