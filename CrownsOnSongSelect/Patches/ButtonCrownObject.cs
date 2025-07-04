@@ -20,9 +20,8 @@ namespace CrownsOnSongSelect.Patches
 
         public ButtonCrownObject(SongSelectKanban parent)
         {
-            Parent = parent;
             isSelected = parent.name == "Kanban1";
-            InitializeCrownGameObjects(parent.gameObject);
+            InitializeCrownGameObjects(parent);
         }
 
 
@@ -39,6 +38,11 @@ namespace CrownsOnSongSelect.Patches
             return true;
         }
 
+        public void InitializeCrownGameObjects(SongSelectKanban parent)
+        {
+            Parent = parent;
+            InitializeCrownGameObjects(parent.gameObject);
+        }
         void InitializeCrownGameObjects(GameObject parent)
         {
             GameObject crownParent = new GameObject("Crown");
@@ -76,7 +80,14 @@ namespace CrownsOnSongSelect.Patches
 
             crownObj.SetActive(false);
 
-            CrownGameObjects.Add(crownId, crownObj);
+            if (CrownGameObjects.ContainsKey(crownId))
+            {
+                CrownGameObjects[crownId] = crownObj;
+            }
+            else
+            {
+                CrownGameObjects.Add(crownId, crownObj);
+            }
         }
 
         internal IEnumerator ChangeCrowns()
